@@ -1,38 +1,41 @@
 .App {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: inherit;
+  overflow: scroll;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header {
+  grid-column: 1/3;
+  grid-row: 1/2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#sidebar {
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#main {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
-.App-link {
-  color: #61dafb;
+#footer {
+  grid-column: 1/3;
+  grid-row: 3/4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* styles for when sidebar is collapsed*/
+.App:has(.collapsed-sidebar) {
+  grid-template-columns: 2% 98%;
+  text-align: left;
+}
+
+.App:has(.collapsed-sidebar) #header, .App:has(.collapsed-sidebar) #footer{
+  display:none;
+}
+
+.App:has(.collapsed-sidebar) #sidebar, .App:has(.collapsed-sidebar) #main{
+  grid-row: 1/4;
 }
