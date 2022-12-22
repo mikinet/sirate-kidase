@@ -1,0 +1,75 @@
+#sidebar {
+  padding: 0 0.2em 0.2em 0;
+}
+
+span.show-hide {
+  display: inline-block;
+  width: 10%;
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+span#expand::before {
+  content: "\25C0";
+}
+span#collapse:after {
+  content: "\25b6";
+}
+
+.title {
+  display: inline-block;
+  border-style: outset;
+  color: white;
+  background-color: black;
+  padding: 1em 0.25em 1em 0em;
+  border-right: 1.5px solid black;
+}
+
+div.list-group {
+  margin-top: 0.4em;
+  border-right: 2.5px solid;
+  border-bottom: 2.5px solid;
+}
+
+.subtitle {
+  padding: 0.8em 0.5em;
+  padding-right: 0;
+  color: white;
+  background-color: rgb(163, 67, 67);
+}
+
+ul.books-list > li {
+  margin: 0.3em 0.15em;
+}
+
+ul.books-list > li:nth-child(2n) button {
+  background-color: rgb(234, 239, 241);
+}
+
+ul.books-list button {
+  padding: 0.3em 0.2em;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+ul.books-list li button:focus {
+  background-color: black;
+  color:white;  
+  border: inset rgb(163, 67, 67);
+}
+
+ul.books-list button:hover{
+  cursor: pointer;
+}
+
+.expanded-sidebar .title,
+.expanded-sidebar .list-group {
+  width: 90%;
+}
+
+.collapsed-sidebar .title,
+.collapsed-sidebar .list-group {
+  display: none;
+  width: 0%;
+}

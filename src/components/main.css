@@ -1,0 +1,32 @@
+div > img {
+  width: 100%;
+  max-height: 100%;
+}
+
+div.page-nav {
+  display: flex;
+  justify-content: space-between;
+  width:80%;
+  margin:auto;
+  margin-top:1.2em;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+div.page-nav span{
+  display: block;
+}
+
+span#prev::before {
+  content: "\003C";
+  margin-right:0.2em;
+}
+
+span#next::after {
+  content: "\003E";
+  margin-left:0.2em;
+}
+
+span#prev:hover,span#next:hover{
+  cursor: pointer;
+}
